@@ -63,12 +63,17 @@
         <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <p>Ready to take the next step? Fill out the form below to schedule your free consultation.</p>
-            <form name="contact" netlify data-netlify-recaptcha="true" method="POST">
-                <input type="hidden" name="form-name" value="contact" />
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Submit</button>
+            <form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
             </form>
         </section>
     </div>
