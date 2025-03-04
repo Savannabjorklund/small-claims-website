@@ -21,9 +21,13 @@
         .contact form input, .contact form textarea { width: 100%; padding: 0.75rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 5px; }
         .contact form button { background: #007BFF; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 5px; cursor: pointer; }
         .contact form button:hover { background: #0056b3; }
+        .disclaimer { background-color: #f0f0f0; padding: 10px; text-align: center; font-size: 0.9em; }
     </style>
 </head>
 <body>
+    <div class="disclaimer">
+        Disclaimer: This website is an independent resource providing assistance with small claims court processes. It is not affiliated with the Santa Barbara County government or any official agency.
+    </div>
     <header>
         <h1>Santa Barbara Small Claims Assistance</h1>
         <p>Your Trusted Partner for Navigating Small Claims Court</p>
@@ -37,7 +41,7 @@
         <section class="hero">
             <h1>Simplify Your Small Claims Process</h1>
             <p>We provide expert guidance, personalized support, and document preparation to help you succeed in small claims court.</p>
-            <a href="#contact" style="display: inline-block; background: #007BFF; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none;">Get Started</a>
+            <a href="#contact" style="display: inline-block; background: #007BFF; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none;">Get Started - Complementary Consultation</a>
         </section>
 
         <section id="services" class="services">
@@ -57,23 +61,18 @@
 
         <section id="about" class="about">
             <h2>About Us</h2>
-            <p>At Santa Barbara Small Claims Assistance, we are dedicated to helping individuals and businesses navigate the small claims process with ease and confidence. With our personalized approach, we aim to make the legal process less intimidating and more accessible to everyone.</p>
+            <p>At Santa Barbara Small Claims Assistance, we are a privately owned company dedicated to helping individuals and businesses navigate the small claims process with ease and confidence. With our personalized approach, we aim to make the legal process less intimidating and more accessible to everyone. We provide assistance and guidance, not official legal representation. We are not affiliated with any government agency. We offer a complementary consultation to discuss your specific needs.</p>
         </section>
 
         <section id="contact" class="contact">
             <h2>Contact Us</h2>
-            <p>Ready to take the next step? Fill out the form below to schedule your free consultation.</p>
-            <form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+            <p>Ready to take the next step? Fill out the form below to schedule your complementary consultation.</p>
+            <form name="contact" netlify method="POST">
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
             </form>
         </section>
     </div>
